@@ -3,8 +3,9 @@ $paletaColores:(
     2: #366BDB,
     3: #4B5DB8,
     4: #414C80,
-    5: #8048D6,
-    6: #6F55D1,
+    5: #1d2135,
+    6: #8048D6,
+    7: #6F55D1,
 );
 
 header{
@@ -22,7 +23,6 @@ header{
             transition: all .2s;
             &:hover{
                 transform: scale(1.1, 1.1);
-                box-shadow: 2px, 2px, 2px, black;
                 ul{
                     display: flex;
                 }
@@ -64,11 +64,14 @@ header{
     justify-content: center;
     img{
         margin-left: 10px !important;
-        width: 40%;
+        width: 50%;
     }
 }
 
 #menu{
     width: 100%;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
+
