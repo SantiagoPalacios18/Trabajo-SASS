@@ -1,0 +1,74 @@
+$paletaColores:(
+    1: #1464DB,
+    2: #366BDB,
+    3: #4B5DB8,
+    4: #414C80,
+    5: #8048D6,
+    6: #6F55D1,
+);
+
+header{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background-color: map-get($paletaColores, 4);
+    display: flex;
+    align-items: center;
+    nav{
+        li{
+            display: inline-block;
+            position: relative;
+            width: 24%;
+            text-align: center;
+            transition: all .2s;
+            &:hover{
+                transform: scale(1.1, 1.1);
+                box-shadow: 2px, 2px, 2px, black;
+                ul{
+                    display: flex;
+                }
+            }
+            a{
+                color: map-get($paletaColores, 1);
+                text-decoration: none;
+                font-size: 20px;
+                &:hover{
+                    color: white;
+                }
+            }
+            
+                ul{
+                    display: flex;
+                }
+
+            ul{
+                display: none;
+                position: absolute;
+                background-color: map-get($paletaColores, 4);
+                width: 200px;
+                border: solid 2px map-get($paletaColores, 3);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                li{
+                    display: flex;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+#imgDiv{
+    display: flex;
+    justify-content: center;
+    img{
+        margin-left: 10px !important;
+        width: 40%;
+    }
+}
+
+#menu{
+    width: 100%;
+    justify-content: center;
+}
