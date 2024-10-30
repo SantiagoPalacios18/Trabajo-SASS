@@ -8,6 +8,12 @@ $paletaColores:(
     7: #6F55D1,
 );
 
+@mixin valoresFuente($size, $color, $deco){
+    font-size: $size;
+    color: $color;
+    text-decoration: $deco !important;
+}
+
 header{
     padding-top: 10px !important;
     padding-bottom: 10px !important;
@@ -22,24 +28,14 @@ header{
             text-align: center;
             transition: all .2s;
             &:hover{
-                transform: scale(1.1, 1.1);
+                
                 ul{
                     display: flex;
                 }
             }
             a{
-                color: map-get($paletaColores, 1);
-                text-decoration: none;
-                font-size: 20px;
-                &:hover{
-                    color: white;
-                }
+                @include valoresFuente(20px, white, none)
             }
-            
-                ul{
-                    display: flex;
-                }
-
             ul{
                 display: none;
                 position: absolute;
@@ -109,6 +105,34 @@ main{
 .tienda{
     padding-left: 5%;
     padding-right: 5%;
+    a{
+        text-decoration: none;
+        transition: all .2s;
+        &:hover{
+            transform: scale(1.04, 1.04);
+        }
+    }
 }
 
-$coloresTienda:
+$coloresTienda:(
+    1: #8048D6,
+    2: #6F55D1,
+);
+
+@each $num, $color in $coloresTienda{
+    .item#{$num}{
+        background-color: $color !important;
+    }
+}
+
+
+
+.items{
+    border: solid 3px map-get($paletaColores, 5) !important;
+    img{
+        padding: 6px;
+    }
+    h5{
+        @include valoresFuente(20px, white, none)
+    }
+}

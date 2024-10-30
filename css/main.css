@@ -10,18 +10,12 @@ header {
     width: 24%;
     text-align: center;
     transition: all .2s; }
-    header nav li:hover {
-      transform: scale(1.1, 1.1); }
-      header nav li:hover ul {
-        display: flex; }
-    header nav li a {
-      color: #1464DB;
-      text-decoration: none;
-      font-size: 20px; }
-      header nav li a:hover {
-        color: white; }
-    header nav li ul {
+    header nav li:hover ul {
       display: flex; }
+    header nav li a {
+      font-size: 20px;
+      color: white;
+      text-decoration: none !important; }
     header nav li ul {
       display: none;
       position: absolute;
@@ -74,3 +68,23 @@ main {
 .tienda {
   padding-left: 5%;
   padding-right: 5%; }
+  .tienda a {
+    text-decoration: none;
+    transition: all .2s; }
+    .tienda a:hover {
+      transform: scale(1.04, 1.04); }
+
+.item1 {
+  background-color: #8048D6 !important; }
+
+.item2 {
+  background-color: #6F55D1 !important; }
+
+.items {
+  border: solid 3px #1d2135 !important; }
+  .items img {
+    padding: 6px; }
+  .items h5 {
+    font-size: 20px;
+    color: white;
+    text-decoration: none !important; }
