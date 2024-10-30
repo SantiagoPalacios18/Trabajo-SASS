@@ -75,3 +75,40 @@ header{
     align-items: center;
 }
 
+main{
+    background-color: map-get($paletaColores, 3);
+    padding-top: 40px;
+}
+
+#tituloNovedades{
+    width: 100%;
+    h4{
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+.carItems{
+    height: 750px;
+    img{
+        height: 100%;
+        transition: all .2s;
+    }
+}
+
+#carrusel{
+    border-top: solid 3px black;
+    border-bottom: solid 3px black;
+    &:hover{
+        img{
+            filter: brightness(50%);
+        }
+    }
+}
+
+.tienda{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+$coloresTienda:
