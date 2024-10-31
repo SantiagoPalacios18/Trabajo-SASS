@@ -44,9 +44,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center; }
+  #menu h1 {
+    font-size: 50px;
+    color: white;
+    text-decoration: none !important; }
 
 main {
-  background-color: #4B5DB8;
+  background-image: linear-gradient(to bottom, #366BDB, #4B5DB8, #314191);
   padding-top: 40px;
   padding-bottom: 300px; }
 
@@ -91,7 +95,7 @@ main {
   margin-bottom: 120px;
   border-top: solid 3px #1d2135;
   border-bottom: solid 3px #1d2135;
-  background-color: #414C80; }
+  background-image: linear-gradient(to right, #414c80, #1d2135); }
   .tienda h4 {
     font-size: 25px;
     color: white;
@@ -130,7 +134,7 @@ main {
 footer {
   background-color: #414C80;
   padding-inline: 20%;
-  height: 100%; }
+  height: auto; }
 
 #submenu {
   height: 200px;
@@ -165,5 +169,5 @@ footer {
 #copyright {
   text-align: center;
   font-size: 17px;
-  color: #6F55D1;
+  color: white;
   font-weight: bold; }

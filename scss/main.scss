@@ -72,10 +72,13 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    h1{
+        @include valoresFuente(50px, white, none)
+    }
 }
 
 main{
-    background-color: map-get($paletaColores, 3);
+    background-image: linear-gradient(to bottom, #366BDB, #4B5DB8, #314191);
     padding-top: 40px;
     padding-bottom: 300px;
 }
@@ -126,7 +129,7 @@ main{
     margin-bottom: 120px;
     border-top: solid 3px map-get($paletaColores, 5);
     border-bottom: solid 3px map-get($paletaColores, 5);
-    background-color: map-get($paletaColores, 4);
+    background-image: linear-gradient(to right, #414c80, #1d2135);
     h4{
         @include valoresFuente(25px, white, none);
         transform: translate(-15px);
@@ -179,7 +182,7 @@ $coloresTienda:(
 footer{
     background-color: map-get($paletaColores, 4);
     padding-inline: 20%;
-    height: 100%;
+    height: auto;
 }
 
 #submenu{
@@ -220,6 +223,6 @@ footer{
 #copyright{
     text-align: center;
     font-size: 17px;
-    color: map-get($paletaColores, 7);
+    color: white;
     font-weight: bold;
 }
