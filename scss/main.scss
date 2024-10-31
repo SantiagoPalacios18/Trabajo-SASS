@@ -34,6 +34,9 @@ header{
                 }
             }
             a{
+                &:hover{
+                    color: map-get($paletaColores, 7);
+                }
                 @include valoresFuente(20px, white, none)
             }
             ul{
@@ -74,12 +77,13 @@ header{
 main{
     background-color: map-get($paletaColores, 3);
     padding-top: 40px;
+    padding-bottom: 300px;
 }
 
 #tituloNovedades{
     width: 100%;
     h4{
-        font-size: 50px;
+        @include valoresFuente(70px, white, none)
         text-align: center;
     }
 }
@@ -90,11 +94,18 @@ main{
         height: 100%;
         transition: all .2s;
     }
+    h5{
+        @include valoresFuente(35px, white, none)
+    }
+    p{
+        @include valoresFuente(20px, white, none)
+    }
 }
 
 #carrusel{
     border-top: solid 3px black;
     border-bottom: solid 3px black;
+    margin-bottom: 300px;
     &:hover{
         img{
             filter: brightness(50%);
@@ -102,9 +113,25 @@ main{
     }
 }
 
+#tituloTienda{
+    h2{
+        @include valoresFuente(60px, white, none)
+    }
+}
+
 .tienda{
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-inline: 5%;
+    padding-block: 15px;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    border-top: solid 3px map-get($paletaColores, 5);
+    border-bottom: solid 3px map-get($paletaColores, 5);
+    background-color: map-get($paletaColores, 4);
+    h4{
+        @include valoresFuente(25px, white, none);
+        transform: translate(-15px);
+    }
+
     a{
         text-decoration: none;
         transition: all .2s;
@@ -112,6 +139,10 @@ main{
             transform: scale(1.04, 1.04);
         }
     }
+}
+
+#tiendaFinal{
+    margin-bottom: 0;
 }
 
 $coloresTienda:(
@@ -125,14 +156,70 @@ $coloresTienda:(
     }
 }
 
-
-
 .items{
+    border-radius: 15px !important;
     border: solid 3px map-get($paletaColores, 5) !important;
+    height: auto;
     img{
         padding: 6px;
+    }
+    div{
+        display: none;
     }
     h5{
         @include valoresFuente(20px, white, none)
     }
+    &:hover{
+        div{
+            display: block;
+        }
+    }
+}
+
+footer{
+    background-color: map-get($paletaColores, 4);
+    padding-inline: 20%;
+    height: 100%;
+}
+
+#submenu{
+    height: 200px;
+    padding-block: 30px;
+    div{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        a{
+            @include valoresFuente(20px, white, none)
+            &:hover{
+                color: map-get($paletaColores, 7);
+            }
+        }
+    }
+}
+
+#redes{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    img{
+        width: 75px;
+        background-color: map-get($paletaColores, 2);
+        border: solid 4px map-get($paletaColores, 5);
+        border-radius: 30px;
+        padding: 2px;
+        transition: all .25s;
+        &:hover{
+            border-radius: 0;
+            transform: scale(1.25, 1.25);
+        }
+    }
+}
+
+#copyright{
+    text-align: center;
+    font-size: 17px;
+    color: map-get($paletaColores, 7);
+    font-weight: bold;
 }
